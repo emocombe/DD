@@ -1,5 +1,6 @@
 package com.example.boss.dd;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
         buttonclick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String g="Random Text";
-                result.setText(g);
+                Intent intent= new Intent("com.example.boss.dd.SecondActivity");
+
+                startActivity(intent);
             }
         });
     }
