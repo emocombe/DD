@@ -18,16 +18,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        OnClickButtonListner();
 
-        result=(TextView) findViewById(R.id.result);
-        buttonclick=(Button) findViewById(R.id.buttonclick);
-        buttonclick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent("com.example.boss.dd.SecondActivity");
+    }
 
-                startActivity(intent);
-            }
-        });
+
+    public void OnClickButtonListner(){
+        buttonclick = (Button) findViewById(R.id.buttonclick);
+        buttonclick.setOnClickListener(
+
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent= new Intent("com.example.boss.dd.SecondActivity");
+                        startActivity(intent);
+                    }
+                }
+
+
+        );
+
     }
 }
+
